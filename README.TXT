@@ -1,23 +1,25 @@
-Project: weblog-analyzer
-Aothors: David J. Barnes and Michael Kölling
 
-This project is part of the material for chapter 7 of the book
+Answers to lab 7, part I:
 
-   Objects First with Java - A Practical Introduction using BlueJ
-   Seventh edition
-   David J. Barnes and Michael Kölling
+Part I:
 
+#1 10am (227), 2pm (227), 6pm(237).
 
-Purpose of project: To provide an illustration of the use of arrays.
-How to start this project: Create a LogAnalyzer object.
+#2 private Person[] people;
 
-The LogfileReader expects to read a file, weblog.txt,
-containing lines of data in the format:
+#3 private boolean[] vacant;
 
-    year month day hour minute
+#4 Used in every method except printData(). 
 
-month values are in the range 1-12 and day values in the range 1-31.
-If the sample file cannot be found, the reader will create some simulated
-data. Alternatively, use the LogfileCreator to create some random data.
-Use its createFile method to give a file name and the number of entries
-to create.
+#5 int[] counts;
+   boolean[true(or false)] occupied;
+   
+#6 a) double[60] readings;
+   b) String[90] urls;
+   c) TicketMachine[5] machines;
+
+#7 1 object, String array with 20 slots.
+
+#8 double[] prices = new double[50];
+
+#9 
