@@ -52,4 +52,10 @@ Part I:
         return total;
     }
 
-#
+#15 for-each loop is better as it iterates through the whole array, which is what we need to do.
+
+#16 In this case the issue can be fixed by making the quietest hour = to the busiest hour so that as it 
+    checks through each hour it will lower the number until it has reached the lowest, I think this is the 
+    safest method of doing so because it ensures no errors. 
+
+
