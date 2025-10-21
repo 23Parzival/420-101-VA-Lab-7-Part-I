@@ -22,4 +22,34 @@ Part I:
 
 #8 double[] prices = new double[50];
 
-#9 
+#9 Java has an error that says out of bounds refering the bounds of the array that is 24 but non-inclusive.
+
+#10 int hour = 0;
+    while(hour < hourCounts.length){
+        System.out.println(hour + ": " + hourCounts[hour]);
+        hour++;
+    }
+
+#11 /** * Print all the values in the marks array that are greater than mean.
+    * @param marks An array of mark values.
+    * @param mean The mean (average) mark. */
+    public void printGreater(double[] marks, double mean) {
+        for(index = 0; index < marks.length; index++) {
+            if(marks[index] > mean) {
+                System.out.println(marks[index]);
+            }
+        }
+    }
+
+#13 /** 
+    * Return the number of accesses recorded in the log file. 
+    */
+    public int numberOfAccesses() {
+        int total = 0;
+        for(index = 0; index < hourCounts.length; index++){
+            total += hourCounts[index];
+        }
+        return total;
+    }
+
+#
