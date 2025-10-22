@@ -24,8 +24,6 @@ public class LogAnalyzer
         // Create the reader to obtain the data.
         reader = new LogfileReader();
     }
-    
-    
 
     /**
      * Analyze the hourly access data from the log file.
@@ -72,19 +70,23 @@ public class LogAnalyzer
     }
     
     public int busiestHour() {
+       int busiestHourCount = 0;
        int busiestHour = 0;
-       for(int hour : hourCounts) {
-           if (hour > busiestHour) {
+       for(int hour = 0; hour < hourCounts.length; hour++) {
+           if (hourCounts[hour] > busiestHourCount) {
+               busiestHourCount = hourCounts[hour];
                busiestHour = hour;
            }
        }
-       return busiestHour; 
+       return busiestHour;
     }
     
     public int quietestHour() {
-       int quietestHour = busiestHour();
-       for(int hour : hourCounts) {
-           if (hour < quietestHour) {
+       int quietestHourCount = hourCounts[busiestHour()];
+       int quietestHour = 0;
+       for(int hour =0; hour < hourCounts.length; hour++) {
+           if (hourCounts[hour] < quietestHourCount) {
+               quietestHourCount = hourCounts[hour];
                quietestHour = hour;
            }
        }

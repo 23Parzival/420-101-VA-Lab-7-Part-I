@@ -18,7 +18,7 @@ Part I:
    b) String[90] urls;
    c) TicketMachine[5] machines;
 
-#7 1 object, String array with 20 slots.
+#7 1 object, String array with 20 slots. No actual string object created.
 
 #8 double[] prices = new double[50];
 
@@ -52,10 +52,11 @@ Part I:
         return total;
     }
 
-#15 for-each loop is better as it iterates through the whole array, which is what we need to do.
+#15 for loop is better because as we iterate through the whole array we need to keep track of the hour we are at (count).
 
-#16 In this case the issue can be fixed by making the quietest hour = to the busiest hour so that as it 
-    checks through each hour it will lower the number until it has reached the lowest, I think this is the 
-    safest method of doing so because it ensures no errors. 
+#16 In this case the issue can be fixed by making the quietestHourCount = to hourCounts[busiestHour()], this makes
+    it so that the quietest hour count will be put to the highest and as it goes down the list the loop
+    will find the smallest count starting from the busiest. I think this is the 
+    safest method of doing so because it ensures no errors by starting from the busiestHourCount. 
 
 
