@@ -70,11 +70,9 @@ public class LogAnalyzer
     }
     
     public int busiestHour() {
-       int busiestHourCount = 0;
        int busiestHour = 0;
        for(int hour = 0; hour < hourCounts.length; hour++) {
-           if (hourCounts[hour] > busiestHourCount) {
-               busiestHourCount = hourCounts[hour];
+           if (hourCounts[hour] > hourCounts[busiestHour]) {
                busiestHour = hour;
            }
        }
@@ -82,11 +80,9 @@ public class LogAnalyzer
     }
     
     public int quietestHour() {
-       int quietestHourCount = hourCounts[busiestHour()];
-       int quietestHour = 0;
-       for(int hour =0; hour < hourCounts.length; hour++) {
-           if (hourCounts[hour] < quietestHourCount) {
-               quietestHourCount = hourCounts[hour];
+       int quietestHour = busiestHour();
+       for(int hour = 0; hour < hourCounts.length; hour++) {
+           if (hourCounts[hour] < hourCounts[quietestHour]) {
                quietestHour = hour;
            }
        }
