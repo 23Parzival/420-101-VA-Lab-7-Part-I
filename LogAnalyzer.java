@@ -80,7 +80,7 @@ public class LogAnalyzer
     }
     
     public int quietestHour() {
-       int quietestHour = busiestHour();
+       int quietestHour = 0;
        for(int hour = 0; hour < hourCounts.length; hour++) {
            if (hourCounts[hour] < hourCounts[quietestHour]) {
                quietestHour = hour;

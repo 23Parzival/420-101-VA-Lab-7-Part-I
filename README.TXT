@@ -54,11 +54,6 @@ Part I:
 
 #15 for loop is better because as we iterate through the whole array we need to keep track of the hour we are at (count).
 
-#16 In this case the issue can be fixed by making the quietestHour = to busiestHour(), this makes
-    it so that the quietest hour count will be put to the highest and as it goes down the list the loop
-    will find the smallest count starting from the busiest. I think this is the 
-    safest method of doing so because it ensures no errors by starting from the busiestHour. 
-
 #17 
 
 #18
